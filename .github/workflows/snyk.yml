@@ -17,7 +17,7 @@ jobs:
       - name: Install Snyk CLI
         run: npm install -g snyk 
       - name: Run Snyk test
-        run: snyk test --file=requirements.txt --package-manager=pip --json | snyk-to-html -o rapport.html
+        run: snyk test --file=requirements.txt --package-manager=pip  
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
